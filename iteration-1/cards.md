@@ -50,18 +50,20 @@ Možnostiam iterovania hry UNO sa medze naozaj nekladú. Hra sama o sebe ponúka
 
 1. **Kartový žobrák**
 
-Princíp tejto iterácie napovie možno už jej samotný názov. V hre niekedy nastane bod keď človek už nemá vhodnú kartu, a tak musí ťahať z kôpky čo mu koniec koncom niekedy ani nepomôže. No čo keby človek musel ťahať dovtedy dokým by nedostal kartu ktorú by mohol položiť?
-Presne o tom je táto iterácia. Dokáže predĺžiť čas jedného kola na desiatky minút až celé hodiny. 
+Princíp tejto iterácie napovie možno už jej samotný názov. V hre niekedy nastane bod keď človek už nemá vhodnú kartu, a tak musí ťahať z kôpky čo mu koniec koncom niekedy ani nepomôže. No čo keby človek musel ťahať dovtedy dokým by nedostal kartu ktorú by mohol položiť? Presne o tom je táto iterácia. Dokáže predĺžiť čas jedného kola na desiatky minút až celé hodiny. UNO nikdy nebolo ZÁBAVNEJŠIE!(ani dlhšie…).
+
+Dĺžka kola so základnými pravidlami: cca 10 minút
+
+Dĺžka kola s iteráciou Kartový žobrák: > 10 minút
 
 2. **Zmoknuté kura**
 
-Každý z nás už určite nejakú či už kartovú, počítačovú alebo nejakú inú hru aspoň raz v živote prehral. Niektorých to zasiahne trocha viac a sú z toho smutný. Vtedy často počuť: “Čo chodíš ako zmoknuté kura?”. Povedzme si na rovinu, že prehru berie každý čo len trošku ťažko. Tak prečo tento pocit prehry ešte zosilniť? Vďaka skvelej iterácií “Zmoknuté kura” si to človek môže vyskúšať aj pri hre UNO. Na začiatku hry sa zvolí trest, a človek ktorý prehrá dané kolo, ho bude musieť vykonať. Prebehnúť v župane po chodbe? Vypiť  “lahodný” drink od spoluhráčov ktorý by zatienil aj špičkových barmanov? **VOĽBA JE V TVOJICH RUKÁCH!**
+Každý z nás už určite nejakú či už kartovú, počítačovú alebo nejakú inú hru aspoň raz v živote prehral. Niektorých to zasiahne trocha viac a sú z toho smutný. Vtedy často počuť: “Čo chodíš ako zmoknuté kura?”. Povedzme si na rovinu, že prehru berie každý čo len trošku ťažko. Tak prečo tento pocit prehry ešte nezosilniť? Vďaka skvelej iterácií “Zmoknuté kura” si to človek môže vyskúšať aj pri hre UNO. Na začiatku hry sa zvolí trest, a človek ktorý prehrá dané kolo, ho bude musieť vykonať. Kolo prehráva ten, ktorý sa nestihne zbaviť všetkých svojich kariet, to znamená, že hra nekončí, keď už niekto nemá karty, ale až vtedy, keď ostanú karty iba jendému hráčovi. Prebehnúť v župane po chodbe? Vypiť “lahodný” drink od spoluhráčov, ktorý by zatienil aj špičkových barmanov? **VOĽBA JE V TVOJICH RUKÁCH!**
+
+Pri tejto iterácii sa nehrá o body. Hráči prežívajú väčšie emócie, pretože nikto nechce vykonať trest, ktorý ho čaká. Každé jedno kolo je novou hrou s novými výzvami. Teraz už záleží na každom jednom kole!
 
 3. **Kolotoč**
 
-Treťou, no nepochybne najšialnejšou iteráciou je KOLOTOČ. Všetci to poznáme, snažíme sa, hráme takticky, no aj tak sa nájde človek, ktorý hrou prekĺzne, a zatím čo ostatní majú 5 a viac kariet, on už má poslednú. Prečo to nezmeniť?
-Pokiaľ má hráč kartu s označením “0” a vyloží ju tak všetci hráči posunú svoje karty hráčovi ktorý je na rade po nich. UNO nikdy nebolo ZÁBAVNEJŠIE!(ani dlhšie…).
+Treťou, no nepochybne najšialnejšou iteráciou je KOLOTOČ. Všetci to poznáme, snažíme sa, hráme takticky, no aj tak sa nájde človek, ktorý hrou prekĺzne, a zatím čo ostatní majú 5 a viac kariet, on už má poslednú. Prečo to nezmeniť? Pokiaľ má hráč kartu s označením “0” a vyloží ju, tak všetci hráči posunú svoje karty hráčovi, ktorý je na rade po nich. Nikto už nie je v bezpečí so svojími kartami! (Ak má hráč poslednú kartu na ruke s označením “0”, po jej vyložení dané kolo vyhráva.)
 
-Dĺžka kola so základnými pravidlami:  <20 minút
-
-Dĺžka kola s iteráciou KOLOTOČ:   30minút - ∞ 
+Hráči sa už nemôžu spoliehať iba na svoje karty, nakoľko kedykoľvek môže svoje katy posunúť ďalšiemu hráčovi a dostať úplne iné. Na počte kariet nezáleži, aj ten kto má plnu ruku kariet sa môže ocitnúť s jednou kartou a ukončiť kolo.
