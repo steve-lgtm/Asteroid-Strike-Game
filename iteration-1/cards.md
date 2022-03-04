@@ -54,7 +54,7 @@ Princíp tejto iterácie napovie možno už jej samotný názov. V hre niekedy n
 
 Dĺžka kola so základnými pravidlami: cca 10 minút
 
-Dĺžka kola s iteráciou Kartový žobrák: > 10 minút
+Dĺžka kola s iteráciou Kartový žobrák: 10 minút - ∞
 
 2. **Zmoknuté kura**
 
