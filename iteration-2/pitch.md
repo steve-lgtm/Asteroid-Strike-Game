@@ -1,6 +1,6 @@
 # The Pitch & Storytelling
 
-# Celeste
+# 1. Celeste
 
 ## High Concept
 Celeste je 2D platformová skákačka, ktorej cieľom je dostať sa na vrchol hory. Počas cesty na vrchol si hra pripravila pre hráčov rôzne výzvy a lokácie, ktoré môžu hráči objaviť.
@@ -43,7 +43,7 @@ Na rozdiel od ostatných, podobne zameraných hier, ako je napríklad Super Meat
 
 Hráč hrá za postavu Madeline, ktorá je zároveň aj hlavnou aktérkou v príbehu. Jej úlohou je postaviť sa svojim démonom popri tom, ako sa snaží dostať na vrchol Celeste Mountain. Hlavným rozprávačom príbehu je samotný autor hry, ktorý s hráčom komunikuje skrz rôznych dialógov. Dá sa teda povedať že ide o writer-led rozprávača.
 
-# Bulánci
+# 2. Bulánci
 
 ## High Concept
 
@@ -81,7 +81,7 @@ Vyniká najmä tým, že je jednou z najväčších legiend českej hernej scén
 
 Typom rozprávača príbehu je writen-driven, kde dizajnér komunikuje príbeh hráčovi. V hre viedli Bulánci vojnu proti ľudom a aj naďalej sa vyznačujú agresivitou, čo viedlo k vraždám Buláncov medzi sebou.
 
-# Omikron: The Nomad Soul
+# 3. Omikron: The Nomad Soul
 
 ## High Concept
 
@@ -121,4 +121,4 @@ Hra na svoju dobu ponúkala hráčovi veľmi veľa interakcií s okolím a rôzn
 
 ## Storytelling
 
-Príbeh začína tak, že hráča navštívi postava z paralelného sveta, policajt, ktorý vyšetruje s kolegom prípady vrážd. Tento policajt hráča požiada o pomoc, aby zachránil tento paralelný svet pred démonmi. Hráč sa prevtelí do postavy policajta, ktorý ho poprosil o pomoc a pracuje na jeho prípadoch v meste Omikron, po ktorom je hra pomenovaná. Ukáže sa, že jeden zo šéfov polície je v skutočnosti démon a láka ľudské duše z iných dimenzií tak, ako bol nalákaný aj hráč hry. V príbehu sa hráč dozvie, že ak v hre zomrie, tak svoju dušu stratí naveky.
+Príbeh začína tak, že hráča navštívi postava z paralelného sveta, policajt, ktorý vyšetruje s kolegom prípady vrážd. Tento policajt hráča požiada o pomoc, aby zachránil tento paralelný svet pred démonmi. Hráč sa prevtelí do postavy policajta, ktorý ho poprosil o pomoc a pracuje na jeho prípadoch v meste Omikron, po ktorom je hra pomenovaná. Ukáže sa, že jeden zo šéfov polície je v skutočnosti démon a láka ľudské duše z iných dimenzií tak, ako bol nalákaný aj hráč hry. V príbehu sa hráč dozvie, že ak v hre zomrie, tak svoju dušu stratí naveky. Celý príbeh je Writer-Led - hráč sa môže rozhodovať sám, no jadro príbehu ostáva rovnaké.
