@@ -28,10 +28,15 @@ Na rozdiel od ostatných, podobne zameraných hier, ako je napríklad Super Meat
 
 ## Persona
 **Meno:** Frank Molovicz
+
 **Vek:** 17
+
 **Vlastnosti:** trpezlivý, kladie dôraz na detaily, kreatívny, cieľavedomý, chytrý, šikovný
+
 **Typ hráča:** dosahovateľ / prieskumník
+
 **Záľuby a koníčky:** kreslenie, tvorba grafiky, učenie, prechádzky v prírode
+
 **Všeobecné informácie:** Frank je študent ktorý čo sa týka hier nie je vôbec náročný. Na rozdiel od svojich kamarátov nevyhľadáva multiplayerové hry, ale skôr ma radšej singleplayerove, keďže jeho cieľom je pri hrách sa uvoľniť, a utiecť od každodennej reality. Rád si ich vychutnáva a preto sa snaží prechádzať hry na 100%. Vlastní Nintendo Switch a PC.
 
 ## Storytelling
@@ -61,10 +66,15 @@ Vyniká najmä tým, že je jednou z najväčších legiend českej hernej scén
 ## Persona
 
 **Meno:** Adam
+
 **Vek:** 23
+
 **Vlastnosti:** impulzívny, introvert, racionálny
+
 **Typ hráča:** killer (zabijak)
+
 **Záľuby a koníčky:** hranie jednoduchých 2D hier, posilňovanie, karate
+
 **Všeobecné informácie:** Adam nie je príliš spoločenským typom, obľubuje hranie hier najmä v škole počas vyučovania. Je študentom manažmentu. Potrpí si na obyčajnej hernej klasike. Obľubuje hry najmä s vraždiacou a krvavou tematikou. Uprednostňuje multiplayerové hry než singleplayer. Je obľúbencom legendárnych a populárnych starších hier.
 
 ## Storytelling
@@ -98,10 +108,15 @@ Hra na svoju dobu ponúkala hráčovi veľmi veľa interakcií s okolím a rôzn
 ## Persona
 
 **Meno:** Samuel
+
 **Vek:** 21
+
 **Vlastnosti:** trpezlivý, pozorný, vnímavý, spoločenský
+
 **Typ hráča:** explorer(prieskumník) / killer(zabijak)
+
 **Záľuby a koníčky:** šport, práca s počítačom (programovanie), hranie PC hier
+
 **Všeobecné informácie:** Samuel je aktívny typ človeka, ktorý nesedí celý deň iba za počítačom, ale ak môže, rád si zašportuje. Rád trávi čas s priateľmi. Občas sa ale potrebuje odreagovať a byť sám. Práve v týchto chvíľach Samuel obľubuje využiť čas na hranie hier. Najradšej hrá hry, kde sa môže voľne pohybovať a skúmať okolie a interakcie prostredia.
 
 ## Storytelling
