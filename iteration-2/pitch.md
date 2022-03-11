@@ -17,7 +17,7 @@ Podľa odhadov, na Steame sa predalo okolo 1.5 milióna kópií tejto hry. Cenov
 
 Čo sa týka hráčov ktorí hru súbežne hrajú na platforme Steam, tak vrchol od vzniku hry bolo 2500 hráčov. Ináč si hra stále drží priemerný počet 600 súbežných hráčov. Rozdiel vidno práve v obdobiach, keď streameri s veľkou fanúšikovskou základňou túto hru streamovali hlavne pomocou platformy Twitch. Tam počet súbežných hráčov väčšinou atakuje hranicu 2000.
 
-Priemerný čas na prejdenie hry je 12 hodín, ak sa hráč zameria len na hlavný je to 8 hodín, a pokiaľ by si niekto trúfol a chcel by prejsť celú hru so všetkými jej súčasťami ako sú zberateľské predmety, tajné pasáže a podobne by sa tento čas vyšplhal na 37 hodín hracieho času.
+Priemerný čas na prejdenie hry je 12 hodín, ak sa hráč zameria len na hlavný pr9beh je to 8 hodín, a pokiaľ by si niekto trúfol a chcel by prejsť celú hru so všetkými jej súčasťami ako sú zberateľské predmety, tajné pasáže a podobne by sa tento čas vyšplhal na 37 hodín hracieho času.
 
 Na rozdiel od väčšiny hier, Celeste dokáže hráčovi stále niečo ponúknuť o čom svedčia aj pravidelné updaty. Možno aj vďaka nim, hráči od hry neodchádzajú, a hra si stále drží čísla čo sa týka predajov, recenzií alebo počtu súbežných hráčov. Na počudovanie, napríklad vďaka počtu ľudí, ktorí hru sledujú by sa dalo povedať že hra každým rokom rastie, čo je na dnešné pomery na takmer 4 ročnú hru dosť nevídané.
 
