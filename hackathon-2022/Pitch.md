@@ -41,3 +41,7 @@ Základom okolia, terénu a stavieb sú kocky alebo bloky, z ktorých sa skladá
 - Cieľom hráča je prežiť a urobiť všetko pre to potrebné, ako môže byť zabíjanie nepriateľov, získavanie potravy zo zvierat alebo rastlín ktoré sa v prostredí nachádzajú
 - Mäso sa smie konzumovať len tepelne upravené, v opačnom prípade hráčovi odoberie život
 - Vyrábať predmety je možné len na miestach na to určených
+
+## Storytelling
+
+Chlapec menom Adam študoval na univerzite astrológie. Hviezdy, kométy, vesmírne planéty boli jeho záľubou od malíčka. Počas štúdia na univerzite sa zaľúbil do dievčiny menom Eva, ktorej záľubou boli taktiež planéty a všetko vesmírne okolo toho. Jeden večer, kedy bol Adam sám a Eva na druhej strane krajiny, sledoval vesmírnu oblohu a na základe jeho výpočtov zistil, že na zem spadne onedlho meteorit. Upozornil na to Evu a keďže boli od seba ďaleko boli rozdelení a každý v inom úkryte. Meteorit, ktorý dopadol na Zem zničil všetko čo bolo živé a Adam musí ísť na povrch zeme a čeliť rôznym nástrahám, kvôli tomu, že dochádzajú zásoby a zároveň sa chce dostáť k svojej obľúbenej polovičke.
