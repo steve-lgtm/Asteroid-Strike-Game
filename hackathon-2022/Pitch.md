@@ -2,7 +2,7 @@
 
 ## High concept
 
-Po apokalypse sa hlavná postava musí dostať znovu na povrch zeme, pretože zásoby jedla a vody pomaly v úkryte dochádzajú a je preto potrebné nájsť nové zásoby. Hráč má na starosti ovládanie tejto hlavnej postavy vo svete, kde bude musieť získať potrebné zdroje na prežitie, pričom bude musieť čeliť rôznym prekážkam. Úlohou hráča je, aby so svojou postavou nepodľahol vonkajšiemu svetu a prežil.
+Po apokalypse sa hlavná postava musí dostať znovu na povrch zeme, pretože zásoby jedla a vody pomaly v úkryte dochádzajú a je preto potrebné nájsť nové zásoby. Hráč má na starosti ovládanie tejto hlavnej postavy vo svete, kde bude musieť získať potrebné zdroje na prežitie, pričom bude musieť čeliť rôznym prekážkam. Úlohou hráča je, aby so svojou postavou nepodľahol vonkajšiemu svetu, prežil a dostal sa do cieľa.
 
 ## Genre
 
