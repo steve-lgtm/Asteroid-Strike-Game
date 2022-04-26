@@ -14,6 +14,8 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 
+var apples = 1
+
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -59,3 +61,4 @@ func attack_state(delta):
 
 func attack_animation_finish():
 	state = MOVE
+

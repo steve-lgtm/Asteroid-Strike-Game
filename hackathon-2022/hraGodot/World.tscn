@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/grass_default.png" type="Texture" id=8]
 [ext_resource path="res://World/Rock.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Apple.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=51]
 0/name = "grass_default.png 0"
@@ -585,3 +586,8 @@ position = Vector2( 148, 46 )
 
 [node name="Rock" parent="YSort/Rocks" instance=ExtResource( 9 )]
 position = Vector2( 183, 94 )
+
+[node name="Apples" type="YSort" parent="YSort"]
+
+[node name="Apple" parent="YSort/Apples" instance=ExtResource( 10 )]
+position = Vector2( 115, 64 )
