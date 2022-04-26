@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hrac.png-e4dc2230eead972afeb2303a87d5ec7e.stex"
+path="res://.import/path.png-933a59ee4b93156b01d86ca93bc47467.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/hrac.png"
-dest_files=[ "res://.import/hrac.png-e4dc2230eead972afeb2303a87d5ec7e.stex" ]
+source_file="res://World/path.png"
+dest_files=[ "res://.import/path.png-933a59ee4b93156b01d86ca93bc47467.stex" ]
 
 [params]
 

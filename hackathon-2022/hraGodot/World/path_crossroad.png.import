@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree.png-14ac646b55f931abf82a3d71f0acdb7a.stex"
+path="res://.import/path_crossroad.png-e6a0829848f56340c127c7fc28bd2e20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Tree.png"
-dest_files=[ "res://.import/Tree.png-14ac646b55f931abf82a3d71f0acdb7a.stex" ]
+source_file="res://World/path_crossroad.png"
+dest_files=[ "res://.import/path_crossroad.png-e6a0829848f56340c127c7fc28bd2e20.stex" ]
 
 [params]
 
