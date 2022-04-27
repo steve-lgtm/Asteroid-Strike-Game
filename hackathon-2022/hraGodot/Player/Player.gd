@@ -19,6 +19,8 @@ var knockback = Vector2.ZERO
 var apples = 0
 var woods = 0
 var axe = false
+var sword = true
+var craftingArea = false
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -60,9 +62,19 @@ func move_state(delta):
 	
 	velocity = move_and_slide(velocity)
 	
+	if Input.is_action_just_pressed("next_item"):
+		sword = !sword
+		axe = !axe
+		
+	if Input.is_action_just_pressed("craft") and craftingArea:
+		print("CRAFTING")
+	
 	if Input.is_action_just_pressed("attack"):
 		# PO ZOBRATI JABLKA SA ANIMACIA PREPNE NA SEKERKU
-		state = CHOP if (apples==2) else ATTACK
+		if axe == true:
+			state = CHOP
+		elif sword == true:
+			state = ATTACK
 
 
 func attack_state(delta):
