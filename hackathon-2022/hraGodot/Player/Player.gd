@@ -14,12 +14,14 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 
-var apples = 1
+var apples = 0
+var woods = 0
 var axe = false
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+
 
 func _ready():
 	animationTree.active = true
