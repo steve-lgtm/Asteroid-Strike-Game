@@ -13,6 +13,8 @@ enum {
 
 var state = MOVE
 var velocity = Vector2.ZERO
+var stats = PlayerStats
+var knockback = Vector2.ZERO
 
 var apples = 0
 var woods = 0
@@ -76,3 +78,14 @@ func attack_animation_finish():
 
 func chop_animation_finish():
 	state = MOVE
+
+
+func _on_Hurtbox_area_entered(area):
+	stats.health -= 1
+	knockback = area.knockback_vector * 120
+	velocity = velocity.move_toward(knockback, ACCELERATION * 5)
+	move_and_slide(velocity)
+	print(area.knockback_vector)
+	print(knockback)
+	if stats.health == 0:
+		queue_free()
