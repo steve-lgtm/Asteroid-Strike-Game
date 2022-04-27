@@ -42,7 +42,7 @@ script = ExtResource( 3 )
 scale = Vector2( 0.420436, 0.415686 )
 frames = SubResource( 5 )
 animation = "Walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -51,6 +51,7 @@ scale = Vector2( 1.65307, 0.203321 )
 shape = SubResource( 6 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
+collision_layer = 8
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 1, -1 )
