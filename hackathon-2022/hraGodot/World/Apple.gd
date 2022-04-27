@@ -7,7 +7,6 @@ onready var labelCountApple = get_parent().get_parent().get_parent().get_node("Y
 func _on_Area2D_body_entered(body):
 	queue_free()
 	player.apples+=1
-	player.axe=true
 	labelCountApple.text=str(player.apples)
 	
 
