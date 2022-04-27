@@ -5,7 +5,7 @@ extends Node2D
 
 
 onready var player = get_parent().get_parent().get_parent().get_node("YSort/Player")
-onready var countWood = get_parent().get_parent().get_parent().get_node("HealthUI/HBoxContainer/CountWood")
+onready var countWood = get_parent().get_parent().get_parent().get_node("HealthUI/CanvasLayer/WoodCounter")
 onready var tree = get_node("Sprite")
 var hp_left = 2
 

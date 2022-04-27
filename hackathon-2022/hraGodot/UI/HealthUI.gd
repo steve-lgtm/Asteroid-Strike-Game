@@ -3,7 +3,7 @@ extends Control
 var hearts = 5 setget set_hearts
 var max_hearts = 5 setget set_max_hearts
 
-onready var label = $HBoxContainer/Label
+onready var label = $CanvasLayer/LifeCounter
 
 func set_hearts(value):
 	hearts = clamp(value, 0, max_hearts)
