@@ -18,6 +18,7 @@ var apples = 0
 var woods = 0
 var axe = false
 var sword = true
+var craftingArea = false
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -62,6 +63,9 @@ func move_state(delta):
 	if Input.is_action_just_pressed("next_item"):
 		sword = !sword
 		axe = !axe
+		
+	if Input.is_action_just_pressed("craft") and craftingArea:
+		print("CRAFTING")
 	
 	if Input.is_action_just_pressed("attack"):
 		# PO ZOBRATI JABLKA SA ANIMACIA PREPNE NA SEKERKU
