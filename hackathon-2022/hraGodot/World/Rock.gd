@@ -6,6 +6,8 @@ onready var countRock = get_parent().get_parent().get_parent().get_node("HealthU
 onready var rock = get_node("Sprite")
 var hp_left = 2
 
+func _ready():
+	randomize()
 
 
 func _on_Hurtbox_area_entered(area):
@@ -15,6 +17,6 @@ func _on_Hurtbox_area_entered(area):
 		rock.scale.y *= 0.75
 		hp_left -= 1
 		if hp_left == 0:
-			player.rocks+=1
+			player.rocks += randi() % 2 + 1
 			countRock.text=str(player.rocks)
 			queue_free()
