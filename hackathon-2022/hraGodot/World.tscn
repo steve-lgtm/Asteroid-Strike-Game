@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -447,6 +447,13 @@ font_data = ExtResource( 19 )
 [sub_resource type="DynamicFont" id=60]
 font_data = ExtResource( 19 )
 
+[sub_resource type="DynamicFont" id=73]
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=74]
+size = 11
+font_data = ExtResource( 19 )
+
 [node name="World" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -756,7 +763,49 @@ custom_fonts/font = SubResource( 60 )
 text = "CRAFT"
 flat = true
 
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="Panel" type="Panel" parent="Control/CanvasLayer"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.905882 )
+margin_left = 92.0
+margin_top = 64.0
+margin_right = 200.0
+margin_bottom = 116.0
+
+[node name="Close" type="Button" parent="Control/CanvasLayer/Panel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 28.0
+margin_bottom = 21.0
+icon = ExtResource( 25 )
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Control/CanvasLayer/Panel"]
+margin_left = 30.0
+margin_top = 1.0
+margin_right = 128.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 73 )
+text = "Pause"
+
+[node name="QuitToMenu" type="Button" parent="Control/CanvasLayer/Panel"]
+self_modulate = Color( 1, 1, 1, 0.768627 )
+margin_left = 4.0
+margin_top = 26.0
+margin_right = 104.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 74 )
+text = "Back to menu"
+
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CloseCrafting" to="YSort/Player" method="_on_CloseCrafting_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftAxe" to="YSort/Player" method="_on_CraftAxe_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftPickaxe" to="YSort/Player" method="_on_CraftPickaxe_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftSword" to="YSort/Player" method="_on_CraftSword_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/Panel/Close" to="YSort/Player" method="_on_Close_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/Panel/QuitToMenu" to="YSort/Player" method="_on_QuitToMenu_pressed"]

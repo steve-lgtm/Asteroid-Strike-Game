@@ -40,6 +40,7 @@ onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/Hitbox
 onready var craftingMenu = get_parent().get_parent().get_node("Crafting/CanvasLayer/TextureRect")
+onready var pausePanel = get_parent().get_parent().get_node("Control/CanvasLayer/Panel")
 
 onready var swordIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Sword")
 onready var axeIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Axe")
@@ -144,6 +145,9 @@ func move_state(delta):
 		elif pickaxe and havePickaxe:
 			state = MINE
 
+	if Input.is_action_just_pressed("pause"):
+		pausePanel.visible = true
+
 
 func attack_state(delta):
 	velocity = Vector2.ZERO
@@ -212,3 +216,11 @@ func _on_CraftSword_pressed():
 		pickaxe = false
 		sword = true
 		swordIcon.visible = true
+
+
+func _on_Close_pressed():
+	pausePanel.visible = false
+
+
+func _on_QuitToMenu_pressed():
+	get_tree().change_scene("res://Menu.tscn")
