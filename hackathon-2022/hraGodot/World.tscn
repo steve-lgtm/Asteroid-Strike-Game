@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://World/wall.png" type="Texture" id=30]
 [ext_resource path="res://World/river_wall.png" type="Texture" id=31]
 [ext_resource path="res://World/cliff_wall.png" type="Texture" id=32]
+[ext_resource path="res://World/SmallRock.tscn" type="PackedScene" id=33]
+[ext_resource path="res://World/Stick.tscn" type="PackedScene" id=34]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -389,6 +391,16 @@ position = Vector2( 123, 123 )
 
 [node name="Box2" parent="YSort/Boxes" instance=ExtResource( 15 )]
 position = Vector2( 254, 40 )
+
+[node name="Sticks" type="YSort" parent="YSort"]
+
+[node name="Stick" parent="YSort/Sticks" instance=ExtResource( 34 )]
+position = Vector2( 88, 139 )
+
+[node name="SmallRocks" type="YSort" parent="YSort"]
+
+[node name="SmallRock" parent="YSort/SmallRocks" instance=ExtResource( 33 )]
+position = Vector2( 205, 64 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 13 )]
 
