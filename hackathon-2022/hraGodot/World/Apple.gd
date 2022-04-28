@@ -1,7 +1,7 @@
 extends Node2D
 
-onready var player = get_parent().get_parent().get_parent().get_node("YSort/Player")
-onready var labelCountApple = get_parent().get_parent().get_parent().get_node("YSort/Player/Camera2D/HBoxContainer/ApplesCount")
+onready var player = get_parent().get_parent().get_parent().get_node("Player")
+onready var labelCountApple = get_parent().get_parent().get_parent().get_node("Player/Camera2D/HBoxContainer/ApplesCount")
 
 
 func _on_Area2D_body_entered(body):

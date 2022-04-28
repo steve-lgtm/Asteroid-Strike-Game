@@ -10,7 +10,7 @@
 [ext_resource path="res://World/grass_default.png" type="Texture" id=8]
 [ext_resource path="res://World/Rock.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/river_side.png" type="Texture" id=10]
-[ext_resource path="res://World/Apple.tscn" type="PackedScene" id=11]
+[ext_resource path="res://RandomApple.gd" type="Script" id=11]
 [ext_resource path="res://Enemies/Alien.tscn" type="PackedScene" id=12]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Crafting.gd" type="Script" id=14]
@@ -664,8 +664,17 @@ position = Vector2( 184, 101 )
 
 [node name="Apples" type="YSort" parent="YSort"]
 
-[node name="Apple" parent="YSort/Apples" instance=ExtResource( 11 )]
-position = Vector2( 182, 79 )
+[node name="Apple" type="Node2D" parent="YSort/Apples"]
+script = ExtResource( 11 )
+
+[node name="Apple2" type="Node2D" parent="YSort/Apples"]
+script = ExtResource( 11 )
+
+[node name="Apple3" type="Node2D" parent="YSort/Apples"]
+script = ExtResource( 11 )
+
+[node name="Apple4" type="Node2D" parent="YSort/Apples"]
+script = ExtResource( 11 )
 
 [node name="Alien" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 25, 50 )
