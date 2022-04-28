@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -38,6 +38,12 @@
 [ext_resource path="res://World/wall.png" type="Texture" id=36]
 [ext_resource path="res://World/river_wall.png" type="Texture" id=37]
 [ext_resource path="res://World/cliff_wall.png" type="Texture" id=38]
+[ext_resource path="res://World/Rocket.tscn" type="PackedScene" id=39]
+[ext_resource path="res://World/Crater.tscn" type="PackedScene" id=40]
+[ext_resource path="res://World/Brush2.tscn" type="PackedScene" id=41]
+[ext_resource path="res://World/BrushDamage.tscn" type="PackedScene" id=42]
+[ext_resource path="res://World/TreeDamage.tscn" type="PackedScene" id=43]
+[ext_resource path="res://World/Satelit.tscn" type="PackedScene" id=44]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -517,37 +523,57 @@ position = Vector2( 250, 93 )
 [node name="SmallRock4" parent="YSort/SmallRocks" instance=ExtResource( 34 )]
 position = Vector2( 201, 33 )
 
-[node name="Stick" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Sticks" type="YSort" parent="YSort"]
+
+[node name="Stick" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 87, 31 )
 
-[node name="Stick2" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick2" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 96, 155 )
 
-[node name="Stick3" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick3" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 143, 186 )
 
-[node name="Stick4" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick4" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 220, 57 )
 
-[node name="Stick5" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick5" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 244, 185 )
 
-[node name="Stick6" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick6" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 244, 118 )
 
-[node name="Stick7" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick7" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 266, 152 )
 
-[node name="Stick8" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick8" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 51, 183 )
 
-[node name="Stick9" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick9" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 181, 57 )
 
-[node name="Stick10" parent="YSort/SmallRocks" instance=ExtResource( 35 )]
+[node name="Stick10" parent="YSort/Sticks" instance=ExtResource( 35 )]
 position = Vector2( 88, 93 )
 
-[node name="Sticks" type="YSort" parent="YSort"]
+[node name="Asety nic viac" type="YSort" parent="YSort"]
+
+[node name="Crater" parent="YSort/Asety nic viac" instance=ExtResource( 40 )]
+position = Vector2( 65, 222 )
+
+[node name="TreeDamage" parent="YSort/Asety nic viac" instance=ExtResource( 43 )]
+position = Vector2( 267, 215 )
+
+[node name="Brush2" parent="YSort/Asety nic viac" instance=ExtResource( 41 )]
+position = Vector2( 199, 217 )
+
+[node name="Satelit" parent="YSort/Asety nic viac" instance=ExtResource( 44 )]
+position = Vector2( 86, 183 )
+
+[node name="Rocket" parent="YSort/Asety nic viac" instance=ExtResource( 39 )]
+position = Vector2( 129, 219 )
+
+[node name="BrushDamage" parent="YSort/Asety nic viac" instance=ExtResource( 42 )]
+position = Vector2( 118, 184 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 13 )]
 
