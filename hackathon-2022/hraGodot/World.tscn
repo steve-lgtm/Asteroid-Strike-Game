@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -54,6 +54,7 @@
 [ext_resource path="res://World/BrigePreparation.tscn" type="PackedScene" id=52]
 [ext_resource path="res://Map.gd" type="Script" id=53]
 [ext_resource path="res://UI/Rock.png" type="Texture" id=54]
+[ext_resource path="res://World/Level2.tscn" type="PackedScene" id=55]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -475,6 +476,10 @@ font_data = ExtResource( 19 )
 [sub_resource type="DynamicFont" id=77]
 font_data = ExtResource( 19 )
 
+[sub_resource type="DynamicFont" id=78]
+size = 19
+font_data = ExtResource( 19 )
+
 [node name="World" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -606,6 +611,12 @@ position = Vector2( 118, 184 )
 
 [node name="BrigePreparation" parent="YSort" instance=ExtResource( 52 )]
 position = Vector2( 258, 65 )
+
+[node name="Level2" parent="YSort" instance=ExtResource( 55 )]
+position = Vector2( 344, 82 )
+
+[node name="CollisionShape2D" parent="YSort/Level2/LEVEL2AREA" index="0"]
+position = Vector2( 2, 5 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 13 )]
 
@@ -1066,7 +1077,38 @@ margin_right = 83.0
 margin_bottom = 82.0
 texture = ExtResource( 54 )
 
+[node name="Control2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control2"]
+
+[node name="Panel" type="Panel" parent="Control2/CanvasLayer"]
+visible = false
+margin_left = 78.0
+margin_top = 62.0
+margin_right = 228.0
+margin_bottom = 110.0
+
+[node name="LEVEL2button" type="Button" parent="Control2/CanvasLayer/Panel"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 29.0
+margin_bottom = 30.0
+icon = ExtResource( 25 )
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Control2/CanvasLayer/Panel"]
+margin_left = 41.0
+margin_top = 11.0
+margin_right = 123.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 78 )
+text = "LEVEL 2"
+
 [connection signal="changeTiles" from="YSort/BrigePreparation" to="Map" method="_on_BrigePreparation_changeTiles"]
+[connection signal="body_entered" from="YSort/Level2/LEVEL2AREA" to="YSort/Level2" method="_on_LEVEL2AREA_body_entered"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CloseCrafting" to="YSort/Player" method="_on_CloseCrafting_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftAxe" to="YSort/Player" method="_on_CraftAxe_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftPickaxe" to="YSort/Player" method="_on_CraftPickaxe_pressed"]
@@ -1079,5 +1121,7 @@ texture = ExtResource( 54 )
 [connection signal="pressed" from="PlayerDiedControl/CanvasLayer/Panel/restart" to="PlayerDiedControl" method="_on_restart_pressed"]
 [connection signal="pressed" from="PlayerDiedControl/CanvasLayer/Panel/menu" to="PlayerDiedControl" method="_on_menu_pressed"]
 [connection signal="pressed" from="BridgeBuild/CanvasLayer/Panel/Button" to="YSort/BrigePreparation" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control2/CanvasLayer/Panel/LEVEL2button" to="YSort/Level2" method="_on_LEVEL2button_pressed"]
 
 [editable path="YSort/BrigePreparation"]
+[editable path="YSort/Level2"]
