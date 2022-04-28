@@ -47,7 +47,7 @@ onready var countSmallRock = get_parent().get_parent().get_node("HealthUI/Canvas
 onready var countWood = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/WoodCounter")
 onready var countRock = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/RockCounter")
 onready var countAsteroid = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/AsteroidCount")
-
+onready var help = get_parent().get_parent().get_node("Help/CanvasLayer/Panel")
 
 onready var pausePanel = get_parent().get_parent().get_node("Control/CanvasLayer/Panel")
 
@@ -243,3 +243,11 @@ func _on_QuitToMenu_pressed():
 
 func _on_AudioStreamPlayer_finished():
 	music.play()
+
+
+func _on_Button_pressed():
+	help.visible = true
+
+
+func _on_QuitHelp_pressed():
+	help.visible = false

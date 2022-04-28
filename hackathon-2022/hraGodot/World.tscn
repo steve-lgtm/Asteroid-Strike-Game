@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -45,6 +45,11 @@
 [ext_resource path="res://World/TreeDamage.tscn" type="PackedScene" id=43]
 [ext_resource path="res://World/Satelit.tscn" type="PackedScene" id=44]
 [ext_resource path="res://World/cinematic-atmosphere-score-2-22136.mp3" type="AudioStream" id=45]
+[ext_resource path="res://UI/Space.png" type="Texture" id=46]
+[ext_resource path="res://UI/C.png" type="Texture" id=47]
+[ext_resource path="res://UI/Q.png" type="Texture" id=48]
+[ext_resource path="res://UI/Sipka.png" type="Texture" id=49]
+[ext_resource path="res://UI/P.png" type="Texture" id=50]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -455,6 +460,14 @@ font_data = ExtResource( 19 )
 size = 11
 font_data = ExtResource( 19 )
 
+[sub_resource type="DynamicFont" id=75]
+size = 10
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=76]
+size = 8
+font_data = ExtResource( 19 )
+
 [node name="World" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -808,6 +821,143 @@ text = "Back to menu"
 stream = ExtResource( 45 )
 autoplay = true
 
+[node name="Help" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Help"]
+
+[node name="Panel" type="Panel" parent="Help/CanvasLayer"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.909804 )
+margin_left = 53.0
+margin_top = 31.0
+margin_right = 236.0
+margin_bottom = 142.0
+
+[node name="TextureRect" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 12.0
+margin_top = 15.0
+margin_right = 44.0
+margin_bottom = 47.0
+rect_scale = Vector2( 0.664411, 0.664411 )
+texture = ExtResource( 47 )
+
+[node name="TextureRect2" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 11.0
+margin_top = 38.0
+margin_right = 43.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.689893, 0.689893 )
+texture = ExtResource( 50 )
+
+[node name="TextureRect3" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 11.0
+margin_top = 62.0
+margin_right = 43.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.715682, 0.715682 )
+texture = ExtResource( 48 )
+
+[node name="TextureRect4" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = -1.0
+margin_top = 64.0
+margin_right = 63.0
+margin_bottom = 128.0
+texture = ExtResource( 46 )
+
+[node name="TextureRect5" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 136.0
+margin_top = 61.0
+margin_right = 168.0
+margin_bottom = 93.0
+rect_scale = Vector2( 0.65179, 0.65179 )
+texture = ExtResource( 49 )
+
+[node name="TextureRect6" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 113.0
+margin_top = 104.0
+margin_right = 145.0
+margin_bottom = 136.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.65179, 0.65179 )
+texture = ExtResource( 49 )
+
+[node name="TextureRect7" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 179.0
+margin_top = 83.0
+margin_right = 211.0
+margin_bottom = 115.0
+rect_rotation = 90.0
+rect_scale = Vector2( 0.65179, 0.65179 )
+texture = ExtResource( 49 )
+
+[node name="TextureRect8" type="TextureRect" parent="Help/CanvasLayer/Panel"]
+margin_left = 157.0
+margin_top = 104.0
+margin_right = 189.0
+margin_bottom = 136.0
+rect_rotation = 180.0
+rect_scale = Vector2( 0.65179, 0.65179 )
+texture = ExtResource( 49 )
+
+[node name="Label" type="Label" parent="Help/CanvasLayer/Panel"]
+margin_left = 38.0
+margin_top = 19.0
+margin_right = 78.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 75 )
+text = "Craft"
+
+[node name="Label2" type="Label" parent="Help/CanvasLayer/Panel"]
+margin_left = 38.0
+margin_top = 42.0
+margin_right = 78.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 75 )
+text = "Pause"
+
+[node name="Label3" type="Label" parent="Help/CanvasLayer/Panel"]
+margin_left = 38.0
+margin_top = 67.0
+margin_right = 78.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 75 )
+text = "Next item"
+
+[node name="Label4" type="Label" parent="Help/CanvasLayer/Panel"]
+margin_left = 61.0
+margin_top = 91.0
+margin_right = 111.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 75 )
+text = "Use"
+
+[node name="Label5" type="Label" parent="Help/CanvasLayer/Panel"]
+margin_left = 131.0
+margin_top = 46.0
+margin_right = 181.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 75 )
+text = "Move"
+
+[node name="QuitHelp" type="Button" parent="Help/CanvasLayer/Panel"]
+margin_left = 145.0
+margin_right = 182.0
+margin_bottom = 34.0
+icon = ExtResource( 25 )
+flat = true
+expand_icon = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Help"]
+
+[node name="Button" type="Button" parent="Help/CanvasLayer2"]
+margin_top = 154.0
+margin_right = 32.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 76 )
+text = "Help"
+
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CloseCrafting" to="YSort/Player" method="_on_CloseCrafting_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftAxe" to="YSort/Player" method="_on_CraftAxe_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftPickaxe" to="YSort/Player" method="_on_CraftPickaxe_pressed"]
@@ -815,3 +965,5 @@ autoplay = true
 [connection signal="pressed" from="Control/CanvasLayer/Panel/Close" to="YSort/Player" method="_on_Close_pressed"]
 [connection signal="pressed" from="Control/CanvasLayer/Panel/QuitToMenu" to="YSort/Player" method="_on_QuitToMenu_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="YSort/Player" method="_on_AudioStreamPlayer_finished"]
+[connection signal="pressed" from="Help/CanvasLayer/Panel/QuitHelp" to="YSort/Player" method="_on_QuitHelp_pressed"]
+[connection signal="pressed" from="Help/CanvasLayer2/Button" to="YSort/Player" method="_on_Button_pressed"]
