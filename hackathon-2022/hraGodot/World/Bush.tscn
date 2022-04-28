@@ -1,15 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://World/Bush.png" type="Texture" id=1]
 [ext_resource path="res://World/Bush.gd" type="Script" id=2]
 [ext_resource path="res://Montserrat-ExtraBold.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 7.0
-height = 14.0
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 11.25, 18.75 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 26.0768
+radius = 29.0
 
 [sub_resource type="DynamicFont" id=3]
 size = 9
@@ -20,17 +21,19 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -5 )
-texture = ExtResource( 1 )
+texture = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.999979, -0.750017 )
 rotation = -1.5708
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2, -1 )
 shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="."]

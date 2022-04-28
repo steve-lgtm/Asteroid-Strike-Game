@@ -24,13 +24,14 @@ var smallRocks = 0
 var sticks = 0
 var asteroids = 0
 
+# if tool is equipped
 var axe = false
-var sword = true
-var pickaxe = false
+var sword = false
+var pickaxe = true
 
-var haveAxe = false
-var haveSword = false
-var havePickaxe = false
+var haveAxe = true
+var haveSword = true
+var havePickaxe = true
 
 var craftingArea = false
 
@@ -40,10 +41,16 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/Hitbox
 onready var craftingMenu = get_parent().get_parent().get_node("Crafting/CanvasLayer/TextureRect")
 
+onready var swordIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Sword")
+onready var axeIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Axe")
+onready var pickaxeIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Pickaxe")
 
 func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = Vector2.ZERO
+	swordIcon.visible = true if haveSword else false
+	axeIcon.visible = true if haveAxe else false
+	pickaxeIcon.visible = true if havePickaxe else false
 
 func _process(delta):
 	if !craftingArea and craftingMenu.visible:
@@ -86,24 +93,36 @@ func move_state(delta):
 		if sword:
 			if haveAxe:
 				axe = true
+				axeIcon.modulate = Color(1,1,1)
 				sword = false
+				swordIcon.modulate = Color(0, 0, 0)
 			elif havePickaxe:
 				pickaxe = true
+				pickaxeIcon.modulate = Color(1,1,1)
 				sword = false
+				swordIcon.modulate = Color(0, 0, 0)
 		elif axe:
 			if havePickaxe:
 				pickaxe = true
+				pickaxeIcon.modulate = Color(1,1,1)
 				axe = false
+				axeIcon.modulate = Color(0, 0, 0)
 			elif haveSword:
 				sword = true
+				swordIcon.modulate = Color(1,1,1)
 				axe = false
+				axeIcon.modulate = Color(0, 0, 0)
 		elif pickaxe:
 			if haveSword:
 				sword = true
+				swordIcon.modulate = Color(1,1,1)
 				pickaxe = false
+				pickaxeIcon.modulate = Color(0, 0, 0)
 			elif haveAxe:
 				axe = true
+				axeIcon.modulate = Color(1,1,1)
 				pickaxe = false
+				pickaxeIcon.modulate = Color(0, 0, 0)
 		else:
 			if sword:
 				sword = true
@@ -167,6 +186,10 @@ func _on_CraftAxe_pressed():
 	if sticks >= 10:
 		sticks -= 10
 		haveAxe = true
+		axe = true
+		pickaxe = false
+		sword = false
+		axeIcon.visible = true
 
 
 func _on_CraftPickaxe_pressed():
@@ -174,6 +197,10 @@ func _on_CraftPickaxe_pressed():
 		rocks -= 5
 		woods -= 5
 		havePickaxe = true
+		axe = false
+		pickaxe = true
+		sword = false
+		pickaxeIcon.visible = true
 
 
 func _on_CraftSword_pressed():
@@ -181,3 +208,7 @@ func _on_CraftSword_pressed():
 		woods -= 5
 		asteroids -= 3
 		haveSword = true
+		axe = false
+		pickaxe = false
+		sword = true
+		swordIcon.visible = true
