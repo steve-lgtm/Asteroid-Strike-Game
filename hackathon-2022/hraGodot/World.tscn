@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://World/path_double_curve.png" type="Texture" id=27]
 [ext_resource path="res://World/gorge.png" type="Texture" id=28]
 [ext_resource path="res://World/river_right_side.png" type="Texture" id=29]
+[ext_resource path="res://World/AsteroidRock.tscn" type="PackedScene" id=30]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -314,6 +315,11 @@ position = Vector2( 123, 123 )
 
 [node name="Box2" parent="YSort/Boxes" instance=ExtResource( 15 )]
 position = Vector2( 254, 40 )
+
+[node name="Asteroids" type="YSort" parent="YSort"]
+
+[node name="AsteroidRock" parent="YSort/Asteroids" instance=ExtResource( 30 )]
+position = Vector2( 76, 122 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 13 )]
 
