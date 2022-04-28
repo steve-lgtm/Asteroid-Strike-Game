@@ -19,6 +19,7 @@ onready var sprite = $AnimatedSprite
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
 onready var swordHitbox = $Hitbox
+onready var player = get_parent().get_parent().get_node("YSort/Player")
 
 func _ready():
 	swordHitbox.knockback_vector = Vector2.ZERO
@@ -53,8 +54,9 @@ func seek_player():
 
 	
 func _on_Hurtbox_area_entered(area):
-	stats.health -= 1
-	if stats.health <= 0:
-		queue_free()
+	if player.sword == true:
+		stats.health -= 1
+		if stats.health <= 0:
+			queue_free()
 	knockback = area.knockback_vector * 120
 	
