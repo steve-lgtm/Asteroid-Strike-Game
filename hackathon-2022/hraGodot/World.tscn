@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -50,6 +50,7 @@
 [ext_resource path="res://UI/Q.png" type="Texture" id=48]
 [ext_resource path="res://UI/Sipka.png" type="Texture" id=49]
 [ext_resource path="res://UI/P.png" type="Texture" id=50]
+[ext_resource path="res://PlayerDiedControl.gd" type="Script" id=51]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 7.9139, 0, 7.9139, 0.0603428, 7.97881, 9.01729, 9.0822, 9.0822, 9.01729, 14.0799, 8.04371, 14.0799, 8.04371, 18.818, 9.01729, 19.0127, 9.0822, 26.0225, 8.04371, 26.0225, 7.97881, 32, 0, 31.9938, 0, 0 )
@@ -958,6 +959,41 @@ margin_bottom = 174.0
 custom_fonts/font = SubResource( 76 )
 text = "Help"
 
+[node name="PlayerDiedControl" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 51 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PlayerDiedControl"]
+
+[node name="Panel" type="Panel" parent="PlayerDiedControl/CanvasLayer"]
+visible = false
+margin_left = 130.0
+margin_top = 37.0
+margin_right = 228.0
+margin_bottom = 139.0
+
+[node name="restart" type="Button" parent="PlayerDiedControl/CanvasLayer/Panel"]
+margin_left = 20.0
+margin_top = 45.0
+margin_right = 74.0
+margin_bottom = 65.0
+text = "restart"
+
+[node name="menu" type="Button" parent="PlayerDiedControl/CanvasLayer/Panel"]
+margin_left = 20.0
+margin_top = 72.0
+margin_right = 74.0
+margin_bottom = 92.0
+text = "menu"
+
+[node name="Label" type="Label" parent="PlayerDiedControl/CanvasLayer/Panel"]
+margin_left = 21.0
+margin_top = 16.0
+margin_right = 76.0
+margin_bottom = 30.0
+text = "you died"
+
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CloseCrafting" to="YSort/Player" method="_on_CloseCrafting_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftAxe" to="YSort/Player" method="_on_CraftAxe_pressed"]
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftPickaxe" to="YSort/Player" method="_on_CraftPickaxe_pressed"]
@@ -967,3 +1003,5 @@ text = "Help"
 [connection signal="finished" from="AudioStreamPlayer" to="YSort/Player" method="_on_AudioStreamPlayer_finished"]
 [connection signal="pressed" from="Help/CanvasLayer/Panel/QuitHelp" to="YSort/Player" method="_on_QuitHelp_pressed"]
 [connection signal="pressed" from="Help/CanvasLayer2/Button" to="YSort/Player" method="_on_Button_pressed"]
+[connection signal="pressed" from="PlayerDiedControl/CanvasLayer/Panel/restart" to="PlayerDiedControl" method="_on_restart_pressed"]
+[connection signal="pressed" from="PlayerDiedControl/CanvasLayer/Panel/menu" to="PlayerDiedControl" method="_on_menu_pressed"]

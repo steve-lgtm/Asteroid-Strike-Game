@@ -179,6 +179,11 @@ func chop_animation_finish():
 func mine_animation_finish():
 	state = MOVE
 
+func player_died():
+	var PlayerDiedControl = get_parent().get_parent().get_node("PlayerDiedControl/CanvasLayer/Panel")
+	PlayerDiedControl.visible = true
+	queue_free()
+
 # KNOCKBACK HRACA PO HITNUTI PRISEROU
 func _on_Hurtbox_area_entered(area):
 	stats.health -= 1
@@ -188,7 +193,7 @@ func _on_Hurtbox_area_entered(area):
 	print(area.knockback_vector)
 	print(knockback)
 	if stats.health == 0:
-		queue_free()
+		player_died()
 
 
 func _on_CloseCrafting_pressed():

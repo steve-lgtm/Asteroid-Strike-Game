@@ -1,7 +1,7 @@
 extends Control
 
-var hearts = 5 setget set_hearts
-var max_hearts = 5 setget set_max_hearts
+var hearts = 5
+var max_hearts = 5
 
 onready var label = $CanvasLayer/Panel/LifeCounter
 
@@ -14,8 +14,8 @@ func set_max_hearts(value):
 	max_hearts = max(value, 1)
 
 func _ready():
-	self.max_hearts = PlayerStats.max_health
-	self.hearts = PlayerStats.health
+	PlayerStats.max_health = self.max_hearts
+	PlayerStats.health = self.max_hearts
 
 func _process(delta):
 	set_hearts(PlayerStats.health)
