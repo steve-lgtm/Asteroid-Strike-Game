@@ -29,7 +29,7 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/Hitbox
-onready var craftingMenu = get_parent().get_parent().get_node("Crafting")
+onready var craftingMenu = get_parent().get_parent().get_node("Crafting/CanvasLayer/TextureRect")
 
 
 func _ready():
