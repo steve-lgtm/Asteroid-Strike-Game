@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cinematic-atmosphere-score-2-22136.mp3-5b3bd7ebc9f921220e00bc6d31cb42b0.mp3str"
+
+[deps]
+
+source_file="res://World/cinematic-atmosphere-score-2-22136.mp3"
+dest_files=[ "res://.import/cinematic-atmosphere-score-2-22136.mp3-5b3bd7ebc9f921220e00bc6d31cb42b0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

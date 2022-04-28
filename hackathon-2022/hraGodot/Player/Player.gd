@@ -39,7 +39,16 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/Hitbox
+onready var music = get_parent().get_parent().get_node("AudioStreamPlayer")
 onready var craftingMenu = get_parent().get_parent().get_node("Crafting/CanvasLayer/TextureRect")
+
+onready var countStick = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/StickCounter")
+onready var countSmallRock = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/SmallRockCounter")
+onready var countWood = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/WoodCounter")
+onready var countRock = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/RockCounter")
+onready var countAsteroid = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/AsteroidCount")
+
+
 onready var pausePanel = get_parent().get_parent().get_node("Control/CanvasLayer/Panel")
 
 onready var swordIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Sword")
@@ -193,7 +202,9 @@ func _on_CraftAxe_pressed():
 		axe = true
 		pickaxe = false
 		sword = false
+		countStick.text=str(sticks)
 		axeIcon.visible = true
+		
 
 
 func _on_CraftPickaxe_pressed():
@@ -204,6 +215,8 @@ func _on_CraftPickaxe_pressed():
 		axe = false
 		pickaxe = true
 		sword = false
+		countRock.text=str(rocks)
+		countWood.text=str(woods)
 		pickaxeIcon.visible = true
 
 
@@ -215,6 +228,8 @@ func _on_CraftSword_pressed():
 		axe = false
 		pickaxe = false
 		sword = true
+		countAsteroid.text=str(asteroids)
+		countWood.text=str(woods)
 		swordIcon.visible = true
 
 
@@ -224,3 +239,7 @@ func _on_Close_pressed():
 
 func _on_QuitToMenu_pressed():
 	get_tree().change_scene("res://Menu.tscn")
+
+
+func _on_AudioStreamPlayer_finished():
+	music.play()
