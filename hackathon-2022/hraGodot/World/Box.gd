@@ -2,7 +2,7 @@ extends Node2D
 
 
 onready var player = get_parent().get_parent().get_parent().get_node("YSort/Player")
-onready var countRock = get_parent().get_parent().get_parent().get_node("HealthUI/CanvasLayer/RockCounter")
+onready var countRock = get_parent().get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/RockCounter")
 onready var box = get_node("Sprite")
 var hp_left = 2
 var rng = RandomNumberGenerator.new()
