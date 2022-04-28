@@ -146,6 +146,7 @@ rect_scale = Vector2( 0.761675, 0.761675 )
 texture = ExtResource( 8 )
 
 [node name="Sword" type="TextureRect" parent="CanvasLayer/Panel"]
+modulate = Color( 0.996078, 0.996078, 0.996078, 1 )
 material = SubResource( 10 )
 margin_left = 257.0
 margin_top = -5.0

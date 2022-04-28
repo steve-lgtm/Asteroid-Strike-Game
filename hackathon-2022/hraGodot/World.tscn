@@ -699,6 +699,7 @@ script = ExtResource( 14 )
 [node name="CanvasLayer" type="CanvasLayer" parent="Crafting"]
 
 [node name="TextureRect" type="TextureRect" parent="Crafting/CanvasLayer"]
+visible = false
 margin_left = 30.0
 margin_top = 40.0
 margin_right = 280.0
