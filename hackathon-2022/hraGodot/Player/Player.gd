@@ -20,9 +20,18 @@ var knockback = Vector2.ZERO
 var apples = 0
 var woods = 0
 var rocks = 0
+var smallRocks = 0
+var sticks = 0
+var asteroids = 0
+
 var axe = false
 var sword = true
 var pickaxe = false
+
+var haveAxe = false
+var haveSword = false
+var havePickaxe = false
+
 var craftingArea = false
 
 onready var animationPlayer = $AnimationPlayer
@@ -75,28 +84,45 @@ func move_state(delta):
 	
 	if Input.is_action_just_pressed("next_item"):
 		if sword:
-			sword = false
-			axe = true
-			pickaxe = false
+			if haveAxe:
+				axe = true
+				sword = false
+			elif havePickaxe:
+				pickaxe = true
+				sword = false
 		elif axe:
-			sword = false
-			axe = false
-			pickaxe = true
+			if havePickaxe:
+				pickaxe = true
+				axe = false
+			elif haveSword:
+				sword = true
+				axe = false
+		elif pickaxe:
+			if haveSword:
+				sword = true
+				pickaxe = false
+			elif haveAxe:
+				axe = true
+				pickaxe = false
 		else:
-			sword = true
-			axe = false
-			pickaxe = false
+			if sword:
+				sword = true
+			elif axe:
+				axe = true
+			elif pickaxe:
+				pickaxe = true
+	
 	#ZOBRAZENIE CRAFTING MENU
 	if Input.is_action_just_pressed("craft") and craftingArea:
 		craftingMenu.visible = !craftingMenu.visible
 
 	
 	if Input.is_action_just_pressed("attack"):
-		if axe == true:
+		if axe and haveAxe:
 			state = CHOP
-		elif sword == true:
+		elif sword and haveSword:
 			state = ATTACK
-		elif pickaxe == true:
+		elif pickaxe and havePickaxe:
 			state = MINE
 
 
@@ -135,3 +161,23 @@ func _on_Hurtbox_area_entered(area):
 
 func _on_CloseCrafting_pressed():
 	craftingMenu.visible = false
+
+
+func _on_CraftAxe_pressed():
+	if sticks >= 10:
+		sticks -= 10
+		haveAxe = true
+
+
+func _on_CraftPickaxe_pressed():
+	if woods >= 5 and rocks >= 5:
+		rocks -= 5
+		woods -= 5
+		havePickaxe = true
+
+
+func _on_CraftSword_pressed():
+	if woods >= 5 and asteroids >= 3:
+		woods -= 5
+		asteroids -= 3
+		haveSword = true
