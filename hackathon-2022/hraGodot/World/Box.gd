@@ -10,7 +10,7 @@ var rng = RandomNumberGenerator.new()
 
 
 func _on_Hurtbox_area_entered(area):
-	if player.pickaxe == true:
+	if player.axe == true:
 		box.scale.x *= 0.75
 		box.scale.y *= 0.75
 		hp_left -= 1

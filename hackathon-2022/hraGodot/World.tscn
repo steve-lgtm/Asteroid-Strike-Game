@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://UI/Wood.png" type="Texture" id=21]
 [ext_resource path="res://UI/SmallRock.png" type="Texture" id=22]
 [ext_resource path="res://UI/asteroid.png" type="Texture" id=23]
+[ext_resource path="res://World/path_crossroad.png" type="Texture" id=24]
+[ext_resource path="res://UI/close_button.png" type="Texture" id=25]
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -593,7 +595,21 @@ font_data = ExtResource( 19 )
 size = 10
 font_data = ExtResource( 19 )
 
+[sub_resource type="DynamicFont" id=57]
+size = 10
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=58]
+size = 10
+font_data = ExtResource( 19 )
+
 [sub_resource type="DynamicFont" id=56]
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=59]
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=60]
 font_data = ExtResource( 19 )
 
 [node name="World" type="Node2D"]
@@ -678,14 +694,17 @@ margin_left = 30.0
 margin_top = 40.0
 margin_right = 280.0
 margin_bottom = 140.0
-texture = ExtResource( 6 )
+texture = ExtResource( 24 )
 expand = true
 
 [node name="CloseCrafting" type="Button" parent="Crafting/CanvasLayer/TextureRect"]
-margin_right = 12.0
-margin_bottom = 20.0
-text = "X"
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 24.0
+margin_bottom = 23.0
+icon = ExtResource( 25 )
 flat = true
+expand_icon = true
 
 [node name="AxePanel" type="Panel" parent="Crafting/CanvasLayer/TextureRect"]
 margin_left = 27.0
@@ -740,9 +759,9 @@ texture = ExtResource( 21 )
 
 [node name="SmallRock" type="TextureRect" parent="Crafting/CanvasLayer/TextureRect/PickaxePanel"]
 margin_left = 28.0
-margin_top = 36.0
+margin_top = 37.0
 margin_right = 60.0
-margin_bottom = 68.0
+margin_bottom = 69.0
 rect_scale = Vector2( 0.746049, 0.746049 )
 texture = ExtResource( 22 )
 
@@ -752,6 +771,14 @@ margin_top = 42.0
 margin_right = 14.0
 margin_bottom = 56.0
 custom_fonts/font = SubResource( 55 )
+text = "5"
+
+[node name="CountOfRocks" type="Label" parent="Crafting/CanvasLayer/TextureRect/PickaxePanel"]
+margin_left = 25.0
+margin_top = 42.0
+margin_right = 45.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 57 )
 text = "5"
 
 [node name="SwordPanel" type="Panel" parent="Crafting/CanvasLayer/TextureRect"]
@@ -769,12 +796,37 @@ rect_scale = Vector2( 1.32412, 1.32412 )
 texture = ExtResource( 20 )
 
 [node name="Asteroid" type="TextureRect" parent="Crafting/CanvasLayer/TextureRect/SwordPanel"]
-margin_left = 33.0
-margin_top = 42.0
-margin_right = 65.0
-margin_bottom = 74.0
+margin_left = 32.0
+margin_top = 41.0
+margin_right = 64.0
+margin_bottom = 73.0
 rect_scale = Vector2( 0.475667, 0.475667 )
 texture = ExtResource( 23 )
+
+[node name="Wood" type="TextureRect" parent="Crafting/CanvasLayer/TextureRect/SwordPanel"]
+margin_left = 4.0
+margin_top = 37.0
+margin_right = 68.0
+margin_bottom = 101.0
+rect_scale = Vector2( 0.378484, 0.378484 )
+texture = ExtResource( 21 )
+
+[node name="CountOfWoods" type="Label" parent="Crafting/CanvasLayer/TextureRect/SwordPanel"]
+margin_left = 4.0
+margin_top = 42.0
+margin_right = 14.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 55 )
+text = "5"
+
+[node name="CountOfAsteroids" type="Label" parent="Crafting/CanvasLayer/TextureRect/SwordPanel"]
+margin_left = 26.0
+margin_top = 42.0
+margin_right = 40.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 58 )
+text = "3
+"
 
 [node name="CraftAxe" type="Button" parent="Crafting/CanvasLayer/TextureRect"]
 margin_left = 28.0
@@ -786,4 +838,27 @@ custom_fonts/font = SubResource( 56 )
 text = "CRAFT"
 flat = true
 
+[node name="CraftPickaxe" type="Button" parent="Crafting/CanvasLayer/TextureRect"]
+margin_left = 100.0
+margin_top = 76.0
+margin_right = 169.0
+margin_bottom = 103.0
+rect_scale = Vector2( 0.667, 0.674 )
+custom_fonts/font = SubResource( 59 )
+text = "CRAFT"
+flat = true
+
+[node name="CraftSword" type="Button" parent="Crafting/CanvasLayer/TextureRect"]
+margin_left = 173.0
+margin_top = 76.0
+margin_right = 242.0
+margin_bottom = 103.0
+rect_scale = Vector2( 0.667, 0.674 )
+custom_fonts/font = SubResource( 60 )
+text = "CRAFT"
+flat = true
+
 [connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CloseCrafting" to="YSort/Player" method="_on_CloseCrafting_pressed"]
+[connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftAxe" to="YSort/Player" method="_on_CraftAxe_pressed"]
+[connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftPickaxe" to="YSort/Player" method="_on_CraftPickaxe_pressed"]
+[connection signal="pressed" from="Crafting/CanvasLayer/TextureRect/CraftSword" to="YSort/Player" method="_on_CraftSword_pressed"]
