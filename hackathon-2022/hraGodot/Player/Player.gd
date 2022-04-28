@@ -27,11 +27,11 @@ var asteroids = 0
 # if tool is equipped
 var axe = false
 var sword = false
-var pickaxe = true
+var pickaxe = false
 
-var haveAxe = true
-var haveSword = true
-var havePickaxe = true
+var haveAxe = false
+var haveSword = false
+var havePickaxe = false
 
 var craftingArea = false
 
