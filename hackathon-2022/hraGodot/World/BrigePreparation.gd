@@ -34,3 +34,7 @@ func _on_Area2D_body_exited(body):
 		labelVar.visible = false
 		buildArea = false
 	
+
+
+func _on_Button_pressed():
+	bridgeWin.visible = false

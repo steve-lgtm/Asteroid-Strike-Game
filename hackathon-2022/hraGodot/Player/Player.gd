@@ -213,14 +213,14 @@ func _on_CraftAxe_pressed():
 
 
 func _on_CraftPickaxe_pressed():
-	if woods >= 5 and rocks >= 5:
-		rocks -= 5
+	if woods >= 5 and smallRocks >= 5:
+		smallRocks -= 5
 		woods -= 5
 		havePickaxe = true
 		axe = false
 		pickaxe = true
 		sword = false
-		countRock.text=str(rocks)
+		countSmallRock.text=str(smallRocks)
 		countWood.text=str(woods)
 		pickaxeIcon.visible = true
 
