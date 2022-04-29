@@ -57,6 +57,7 @@ func _on_Hurtbox_area_entered(area):
 	if player.sword == true:
 		stats.health -= 1
 		if stats.health <= 0:
+			player.aliensKilled += 1
 			queue_free()
 	knockback = area.knockback_vector * 120
 	

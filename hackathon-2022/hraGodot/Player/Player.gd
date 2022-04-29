@@ -23,6 +23,7 @@ var rocks = 0
 var smallRocks = 0
 var sticks = 0
 var asteroids = 0
+var aliensKilled = 0
 
 # if tool is equipped
 var axe = false
@@ -55,6 +56,8 @@ onready var swordIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer
 onready var axeIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Axe")
 onready var pickaxeIcon = get_parent().get_parent().get_node("HealthUI/CanvasLayer/Panel/Pickaxe")
 
+signal gameWon
+
 func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = Vector2.ZERO
@@ -77,6 +80,11 @@ func _process(delta):
 		
 		MINE:
 			mine_state(delta)
+	if aliensKilled == 3:
+		emit_signal("gameWon")
+		var gameWonWindow = get_parent().get_parent().get_node("GameWon/CanvasLayer/Panel")
+		gameWonWindow.visible = true
+		queue_free()
 
 func move_state(delta):
 	var input_vector = Vector2.ZERO
@@ -209,7 +217,9 @@ func _on_CraftAxe_pressed():
 		sword = false
 		countStick.text=str(sticks)
 		axeIcon.visible = true
-		
+		swordIcon.modulate = Color(0, 0, 0)
+		pickaxeIcon.modulate = Color(0, 0, 0)
+		axeIcon.modulate = Color(1, 1, 1)
 
 
 func _on_CraftPickaxe_pressed():
@@ -223,6 +233,9 @@ func _on_CraftPickaxe_pressed():
 		countSmallRock.text=str(smallRocks)
 		countWood.text=str(woods)
 		pickaxeIcon.visible = true
+		swordIcon.modulate = Color(0, 0, 0)
+		pickaxeIcon.modulate = Color(1,1,1)
+		axeIcon.modulate = Color(0, 0, 0)
 
 
 func _on_CraftSword_pressed():
@@ -236,6 +249,9 @@ func _on_CraftSword_pressed():
 		countAsteroid.text=str(asteroids)
 		countWood.text=str(woods)
 		swordIcon.visible = true
+		swordIcon.modulate = Color(1, 1, 1)
+		pickaxeIcon.modulate = Color(0, 0, 0)
+		axeIcon.modulate = Color(0, 0, 0)
 
 
 func _on_Close_pressed():

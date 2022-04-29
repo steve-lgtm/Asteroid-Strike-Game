@@ -13,7 +13,7 @@ signal changeTiles
 
 func _process(delta):
 	if Input.is_action_just_pressed("use") and buildArea:
-		if player.rocks == 5 and player.woods == 10:
+		if player.rocks >= 5 and player.woods >= 10:
 			player.rocks -= 5
 			player.woods -= 10
 			player.countRock.text=str(player.rocks)
