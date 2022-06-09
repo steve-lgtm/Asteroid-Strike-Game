@@ -1,4 +1,4 @@
-# Asteroid-Strike-Game
+# Asteroid Strike Game
 
 ## Description
 
